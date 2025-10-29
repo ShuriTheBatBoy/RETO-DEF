@@ -1,0 +1,202 @@
+body {
+      transition: background-color 0.5s ease; /* transición suave */
+      background-color: #f8f9fa; /* color inicial */
+    }
+    body.scrolled {
+      background-color: #343a40; /* color cuando haces scroll */
+      color: white; /* opcional: cambiar color de texto */
+    }
+
+    .container {
+      height: 1450px; /* altura para permitir scroll */
+      padding-top: 100px;
+    }
+
+/*Noticias*/
+.news-container {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.news-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.news-content p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.read-more {
+  text-decoration: underline;
+  color: #0078d4;
+  font-weight: bold;
+}
+.read-more:hover {
+  color: #0056a1;
+}
+
+@media (max-width: 700px) {
+  .news-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-image img {
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*Calendario*/
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead th {
+  background-color: #212529;
+  color: white;
+}
+
+tbody td {
+  vertical-align: middle;
+}
+.table {
+  font-family: 'Fredoka', sans-serif;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.day {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.day.event {
+  background-color: #ffeb3b;
+  border-color: #fbc02d;
+  font-weight: bold;
+}
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    .card {
+      border: 2px solid #000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline-dark i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 700px) {
+      .card {
+        width: 100% !important;
+      }
+    }
+
+          /* Coloca el cuadradito al lado del texto */
+        section {
+            display: flex;
+            align-items: center;
+            gap: 16px; /* espacio entre imagen y contenido */
+        }
+
+        /* En pantallas pequeñas, los eventos vuelven a apilarse */
+        @media (max-width: 700px) {
+            section {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100% !important;
+            }
+            .image-container {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+  
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .event-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
+            justify-content: space-between; /* Espacio entre los elementos */
+        }
+        section {
+            border: 4px solid #000000;
+            padding: 20px;
+            margin: 10px; /* Reduce el margen para que quepan dos por fila */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: calc(50% - 20px); /* Ancho del 50% menos el margen */
+            background-color: #ffffff;
+        }
+        .image-container {
+            width: 120px;
+            height: 120px;
+            background-color: #e0e0e0;
+            margin-right: 20px;
+            border-radius: 5px;
+            border: 2px solid #000;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .info-link {
+            display: inline-block; 
+            width: 200px; 
+            height: 50px; 
+            background-color: #0078d4; 
+            color: white; 
+            text-align: center; 
+            line-height: 50px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background-color 0.3s; 
+        }
+        .info-link:hover {
+            background-color: #0056a1; 
+        }
