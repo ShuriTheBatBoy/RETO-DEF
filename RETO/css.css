@@ -1,202 +1,307 @@
+/* ==================== BASE ==================== */
 body {
-      transition: background-color 0.5s ease; /* transición suave */
-      background-color: #f8f9fa; /* color inicial */
-    }
-    body.scrolled {
-      background-color: #343a40; /* color cuando haces scroll */
-      color: white; /* opcional: cambiar color de texto */
-    }
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Fredoka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
 
-    .container {
-      height: 1450px; /* altura para permitir scroll */
-      padding-top: 100px;
-    }
+/* ==================== NAVBAR ==================== */
+.navbar {
+  font-weight: 500;
+  border-bottom: 3px solid #333;
+}
 
-/*Noticias*/
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+/* ==================== PAGE HEADER ==================== */
+.page-header {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.page-header h1 {
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.page-header img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+/* ==================== CARRUSEL DE EVENTOS ==================== */
+#eventCarousel {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+}
+
+#eventCarousel .card {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+  white-space: normal;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 380px;
+}
+
+#eventCarousel .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#eventCarousel .card-body {
+  height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+#eventCarousel .card-body .btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+}
+
+#eventCarousel .card-title {
+  min-height: 120px;
+  margin-bottom: 15px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn-outline-dark {
+  border-width: 2px;
+}
+
+/* ==================== NOTICIAS ==================== */
 .news-container {
-  display: flex;
-  align-items: flex-start;
-  border: 2px solid #ccc;
+  background: white;
   border-radius: 8px;
-  padding: 16px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .news-image img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-right: 20px;
 }
 
 .news-content {
-  flex: 1;
+  padding: 20px;
 }
 
 .news-content h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
 }
 
 .news-content p {
-  margin: 10px 0;
-  color: #555;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .read-more {
-  text-decoration: underline;
-  color: #0078d4;
-  font-weight: bold;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
 .read-more:hover {
-  color: #0056a1;
+  color: #764ba2;
 }
 
-@media (max-width: 700px) {
-  .news-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .news-image img {
-    margin-bottom: 10px;
-    margin-right: 0;
-    width: 100%;
-    height: auto;
-  }
+/* ==================== CALENDARIO ==================== */
+.calendar-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
 }
 
-
-/*Calendario*/
-
-table {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-thead th {
-  background-color: #212529;
-  color: white;
-}
-
-tbody td {
-  vertical-align: middle;
-}
-.table {
-  font-family: 'Fredoka', sans-serif;
-}
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-  font-family: 'Fredoka', sans-serif;
+  grid-template-columns: repeat(7, 2fr);
+  gap: 5px;
 }
 
 .day {
-  background-color: #fff;
-  border: 2px solid #ccc;
   padding: 10px;
   text-align: center;
-  font-size: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .day.event {
-  background-color: #ffeb3b;
-  border-color: #fbc02d;
+  background: #ffcc00;
+  color: #333;
   font-weight: bold;
 }
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      transition: background-color 0.5s ease;
-    }
 
-    h1, h2 {
-      margin: 0;
-    }
+/* ==================== CONTAINERS Y LAYOUTS ==================== */
+.container-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .card {
-      border: 2px solid #000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+.news-column {
+  display: inline-block;
+  width: calc(70% - 20px);
+  vertical-align: top;
+}
 
-    .btn-outline-dark i {
-      font-size: 1.2rem;
-    }
+.calendar-column {
+  display: inline-block;
+  width: 28%;
+  vertical-align: top;
+  margin-left: 2%;
+}
 
-    @media (max-width: 700px) {
-      .card {
-        width: 100% !important;
-      }
-    }
+.event-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
 
-          /* Coloca el cuadradito al lado del texto */
-        section {
-            display: flex;
-            align-items: center;
-            gap: 16px; /* espacio entre imagen y contenido */
-        }
+.event-container section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
 
-        /* En pantallas pequeñas, los eventos vuelven a apilarse */
-        @media (max-width: 700px) {
-            section {
-                flex-direction: column;
-                align-items: flex-start;
-                width: 100% !important;
-            }
-            .image-container {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        }
-  
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .event-container {
-            display: flex;
-            flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
-            justify-content: space-between; /* Espacio entre los elementos */
-        }
-        section {
-            border: 4px solid #000000;
-            padding: 20px;
-            margin: 10px; /* Reduce el margen para que quepan dos por fila */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            width: calc(50% - 20px); /* Ancho del 50% menos el margen */
-            background-color: #ffffff;
-        }
-        .image-container {
-            width: 120px;
-            height: 120px;
-            background-color: #e0e0e0;
-            margin-right: 20px;
-            border-radius: 5px;
-            border: 2px solid #000;
-        }
-        h1, h2 {
-            margin: 0;
-        }
-        .info-link {
-            display: inline-block; 
-            width: 200px; 
-            height: 50px; 
-            background-color: #0078d4; 
-            color: white; 
-            text-align: center; 
-            line-height: 50px; 
-            border-radius: 5px; 
-            text-decoration: none; 
-            transition: background-color 0.3s; 
-        }
-        .info-link:hover {
-            background-color: #0056a1; 
-        }
+.event-container section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Clearfix para las secciones con float */
+.event-container section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.event-container h2 {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.event-container p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.event-container p strong {
+  color: #333;
+}
+
+/* ==================== IMAGE CONTAINERS ==================== */
+.image-container {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Imágenes impares - izquierda */
+.event-container section:nth-child(odd) .image-container {
+  float: left;
+  margin-right: 30px;
+}
+
+/* Imágenes pares - derecha */
+.event-container section:nth-child(even) .image-container {
+  float: right;
+  margin-left: 30px;
+}
+
+/* ==================== LINKS ==================== */
+.info-link {
+  display: inline-block;
+  background-color: #667eea;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-link:hover {
+  background-color: #4c5fd5;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 50px;
+  clear: both;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .news-column,
+  .calendar-column {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container,
+  .event-container section:nth-child(odd) .image-container,
+  .event-container section:nth-child(even) .image-container {
+    float: none;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header img {
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  .event-container section {
+    padding: 20px;
+  }
+
+  .event-container h2 {
+    font-size: 1.3rem;
+  }
+}
