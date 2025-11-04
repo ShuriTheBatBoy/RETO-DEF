@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="agenda.html">Calendario</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="eventos.html">Suscripciones a Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="eventos.html">Inscripciones a Eventos</a></li>
                 </ul>
             </div>
         </div>
@@ -47,6 +47,7 @@
                 <!-- Detalles del evento -->
                 <div class="event-details">
                     <h2>Eventos</h2>
+                    
                     <div class="detail-item">
                         <i class="fas fa-tag"></i>
                         <strong>Tipos:</strong> Talleres Prácticos e Intensivos, Conferencias y Networking
@@ -59,7 +60,7 @@
 
                     <div class="detail-item">
                         <i class="fas fa-clock"></i>
-                        <strong>Horarios:</strong> 9:00 - 24:00h (con coffee breaks)
+                        <strong>Horarios:</strong> 10:00 - 22:00h (con coffee breaks)
                     </div>
 
 
@@ -82,7 +83,25 @@
                     <form id="registroForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <!-- Campo oculto para identificar el evento -->
                         <input type="hidden" name="evento" value="Taller Automatización - 28 Nov 2025">
+                    
                         
+                        <div class="row-custom">
+                            <div class="col-custom col-custom-half">
+                                <label for="DNI" class="form-label">
+                                    <i class="fas fa-user"></i> DNI *
+                                </label>
+                                <input 
+                                    id="DNI" 
+                                    name="DNI" 
+                                    type="text" 
+                                    class="form-control" 
+                                    placeholder="Tu DNI" 
+                                    required 
+                                    minlength="9" 
+                                    aria-required="true">
+                                <div class="invalid-feedback">El DNI es obligatorio (mínimo 9 caracteres).</div>
+                            </div>
+
                         <div class="row-custom">
                             <div class="col-custom col-custom-half">
                                 <label for="nombre" class="form-label">
@@ -176,7 +195,7 @@
 
                             <div class="col-custom col-custom-half">
                                 <label for="hora" class="form-label">
-                                    <i class="fas fa-clock"></i> Selecciona la hora *
+                                    <i class="fas fa-clock"></i> Selecciona la hora y el evento * 
                                 </label>
                                 <select 
                                     id="hora" 
@@ -184,14 +203,12 @@
                                     class="form-control" 
                                     required 
                                     aria-required="true">
-                                    <option value="">-- Elige una hora --</option>
-                                    <option value="09:00">09:00 - Sesión Mañana</option>
-                                    <option value="14:00">14:00 - Sesión Tarde</option>
-                                    <option value="16:00">16:00 - Sesión Tarde (alternativa)</option>
-                                    <option value="18:00">18:00 - Sesión Tarde (complementaria)</option>
-                                    <option value="20:00">20:00 - Sesión Tarde (alternativa)</option>
-                                    <option value="22:00">22:00 - Sesión Tarde (alternativa)</option>
-                                    <option value="09:00-18:00">09:00 - 24:00 - Jornada Completa</option>
+                                    <option value="">-- Elige hora y  evento --</option>
+                                    <option value="10:00">10:00 - Sesión Mañana - Automatiza tu trabajo empresarial con Robocorp, Claude, OpenAI, Copilot y Github</option>
+                                    <option value="12:00">12:00 - Sesión Mediodia - Analiza tu rendimiento con Excel, chatgpt, y muchas otras herramientas disponibles de forma freemium</option>
+                                    <option value="16:00">16:00 - Sesión Tarde - Del B2B tradicional al digital: introducción a la digitalización empresarial y su impacto en el mercado </option>
+                                    <option value="18:00">18:00 - Sesión Tarde - IA generativa para 3D y 2D en Creación de Assets para videojuegos basado en unity</option>
+                                    <option value="20:00">20:00 - Sesión Noche - Colaboración Mou5Labs x CUPRA</option>
                                 </select>
                                 <div class="invalid-feedback">Debes seleccionar una hora.</div>
                             </div>
@@ -222,34 +239,6 @@
                                     class="form-control" 
                                     rows="4" 
                                     placeholder="¿Tienes alguna pregunta o necesidad especial?"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="row-custom">
-                            <div class="col-custom">
-                                <label class="form-label">
-                                    <i class="fas fa-clipboard-list"></i> Eventos inscritos:
-                                </label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="evento1" name="eventos_inscritos" value="Taller de Automatización Empresarial">
-                                    <label class="form-check-label" for="evento1">Automatiza tu trabajo empresarial con Robocorp, Claude, OpenAI, Copilot y Github</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="evento2" name="eventos_inscritos" value="Workshop de IA Generativa">
-                                    <label class="form-check-label" for="evento2">Analiza tu rendimiento con Excel, chatgpt, y muchas otras herramientas disponibles de forma freemium</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="evento3" name="eventos_inscritos" value="Curso de Python Avanzado">
-                                    <label class="form-check-label" for="evento3">Del B2B tradicional al digital: introducción a la digitalización empresarial y su impacto en el mercado</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="evento4" name="eventos_inscritos" value="Masterclass de Machine Learning">
-                                    <label class="form-check-label" for="evento4">IA generativa para 3D y 2D en Creación de Assets para videojuegos basado en unity</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="evento5" name="eventos_inscritos" value="Seminario de Robótica Industrial">
-                                    <label class="form-check-label" for="evento5">Colaboración Mou5Labs x CUPRA</label>
-                                </div>
                             </div>
                         </div>
 
