@@ -174,68 +174,70 @@ body {
   margin-left: 2%;
 }
 
-.event-container {
-  max-width: 1200px;
+.id-container {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px 40px;
 }
 
-.event-container section {
-  background: white;
+.id-container section {
+  background: rgb(255, 255, 255);
   border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 70px;
+  margin-bottom: 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-.event-container section:hover {
+.id-container section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Clearfix para las secciones con float */
-.event-container section::after {
+.id-container section::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.event-container h2 {
+.id-container h2 {
   color: #333;
   font-size: 1.6rem;
   margin-bottom: 15px;
   font-weight: 600;
+  margin-top: 30px;
 }
 
-.event-container p {
+.id-container p {
   color: #666;
   line-height: 1.8;
   margin-bottom: 10px;
 }
 
-.event-container p strong {
+.id-container p strong {
   color: #333;
 }
 
+
 /* ==================== IMAGE CONTAINERS ==================== */
 .image-container {
-  width: 200px;
-  height: 150px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 240px;
+  height: 320px;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin: 15px;
+  padding: 15px;
 }
 
 /* Imágenes impares - izquierda */
-.event-container section:nth-child(odd) .image-container {
+.id-container section:nth-child(odd) .image-container {
   float: left;
   margin-right: 30px;
 }
 
 /* Imágenes pares - derecha */
-.event-container section:nth-child(even) .image-container {
+.id-container section:nth-child(even) .image-container {
   float: right;
   margin-left: 30px;
 }
