@@ -20,11 +20,11 @@ public class JavaJDBC {
             ResultSet totalResult = statement.executeQuery("SELECT COUNT(*) AS total FROM inscripciones");
             if (totalResult.next()) {
                 int total = totalResult.getInt("total");
-                System.out.println("🔢 Total de personas inscritas: " + total);
+                System.out.println(" Total de personas inscritas: " + total);
             }
 
             // 2. Número de personas inscritas por evento
-            System.out.println("\n📊 Número de personas por evento:");
+            System.out.println("\n Número de personas por evento:");
             ResultSet countByEvent = statement.executeQuery(
                 "SELECT eleccion, COUNT(*) AS cantidad FROM inscripciones GROUP BY eleccion"
             );
@@ -35,7 +35,7 @@ public class JavaJDBC {
             }
 
             // 3. Listado de personas por evento
-            System.out.println("\n📋 Listado de personas por evento:");
+            System.out.println("\n Listado de personas por evento:");
             ResultSet listByEvent = statement.executeQuery(
                 "SELECT eleccion, dni, nombre, apellido FROM inscripciones ORDER BY eleccion, apellido, nombre"
             );
@@ -57,7 +57,7 @@ public class JavaJDBC {
             connection.close();
 
         } catch (Exception e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println(" Error: " + e.getMessage());
         }
     }
 }
