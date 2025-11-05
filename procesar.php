@@ -8,12 +8,12 @@ $password   = "";
 $dbname     = "mou5labs";
 
 // Recoger dato del formulario, podría ser un get ($_GET)
-if (isset($_POST["nombre"])&& isset($_POST["apellido"])) {
+if (isset($_POST["dni"])&& isset($_POST["apellido"])&& isset($_POST["nombre"])) {
+    $dni = $_POST["dni"];
     $nombre = $_POST["nombre"];
 	$apellido = $_POST["apellido"];
 } else {
-    $nombre = "";
-	$apellido = "";
+    die("Faltan datos del formulario");
 }
 
 
@@ -28,17 +28,18 @@ if ($conn->connect_error) {
 }
 
 // Evitar insertar vacío
-if ($nombre === "" || $apellido === "") {
+if ($dni === "" || $nombre === "" || $apellido === "") {
     // Finaliza la ejecución del script y muestra el mensaje indicado al usuario
-	die("El nombre/apellido no puede estar vacío");
+	die("El dni/nombre/apellido no puede estar vacío");
 }
 
 // Consulta SQL para insertar
-$sql = "INSERT INTO inscripciones (nombre, apellido) VALUES ('$nombre', '$apellido')";
+$sql = "INSERT INTO inscripciones (dni, nombre, apellido) VALUES ('$dni', '$nombre', '$apellido')";
 
 // Ejecutar
 if ($conn->query($sql) === TRUE) {
     echo "<h2>¡Registro correcto!</h2>";
+    echo "<p>DNI insertado: " . $dni . "</p>";
     echo "<p>Nombre insertado: " . $nombre . "</p>";
 	echo "<p>Apellido insertado: " . $apellido . "</p>";
     echo '<p><a href="javascript:history.back()">Volver</a></p>';
