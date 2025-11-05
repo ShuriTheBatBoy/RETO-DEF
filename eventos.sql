@@ -35,10 +35,9 @@ CREATE TABLE `inscripciones` (
   `mail` varchar(100) NOT NULL,
   `telefono` int(9) NOT NULL,
   `dia` date NOT NULL,
-  `hora` time NOT NULL,
+  `eleccion` ENUM ('10-Automatiza','12-Analiza','16-B2B','18-IaGenerativa','20-Colaboracion') NOT NULL,
   `empresa` varchar(100) DEFAULT NULL,
-  `comentarios` text DEFAULT NULL,
-  `eventos` ('Automatiza','Analiza','B2B','IaGenerativa','Colaboracion') NOT NULL
+  `comentarios` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
