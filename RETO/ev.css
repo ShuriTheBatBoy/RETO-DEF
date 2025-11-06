@@ -1,7 +1,7 @@
 /*===================== Formularios =====================*/
         body {
             font-family: 'Fredoka', sans-serif;
-            background: linear-gradient(135deg, #667eea 70%, #764ba2 100%);
+            background-image: url('/RETO/images/fondo5.png');
             min-height: 100vh;
         }
 
