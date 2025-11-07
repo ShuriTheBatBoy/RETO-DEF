@@ -38,7 +38,7 @@
         <div class="event-card">
             <!-- Header del evento -->
             <div class="event-header">
-                <h1><i class="fas fa-robot"></i> EVENTOS</h1>
+                <h1>EVENTOS</h1>
                 <p>Eventos disponibles en noviembre de 2025</p>
             </div>
 
@@ -79,19 +79,18 @@
                     <h3><i class="fas fa-user-plus"></i> Inscríbete a los eventos</h3>
                     <p style="text-align: center; color: #6c757d; margin-bottom: 25px;">Completa el formulario para reservar tu plaza</p>
 
-                    <form id="registroForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <!-- Campo oculto para identificar el evento -->
-                        <input type="hidden" name="evento" value="Taller Automatización - 28 Nov 2025">
-                    
-                        
+                    <form id="registroForm" action="http://localhost/mou5labs/procesar.php" method="POST">
+
+
+
                         <div class="row-custom">
                             <div class="col-custom col-custom-half">
-                                <label for="DNI" class="form-label">
+                                <label for="dni" class="form-label">
                                     <i class="fas fa-user"></i> DNI *
                                 </label>
                                 <input 
-                                    id="DNI" 
-                                    name="DNI" 
+                                    id="dni" 
+                                    name="dni" 
                                     type="text" 
                                     class="form-control" 
                                     placeholder="Tu DNI" 
@@ -137,12 +136,12 @@
 
                         <div class="row-custom">
                             <div class="col-custom">
-                                <label for="correo" class="form-label">
+                                <label for="mail" class="form-label">
                                     <i class="fas fa-envelope"></i> Correo electrónico *
                                 </label>
                                 <input 
-                                    id="correo" 
-                                    name="correo" 
+                                    id="mail" 
+                                    name="mail" 
                                     type="email" 
                                     class="form-control" 
                                     placeholder="nombre@ejemplo.com" 
@@ -175,39 +174,39 @@
 
                         <div class="row-custom">
                             <div class="col-custom col-custom-half">
-                                <label for="fecha" class="form-label">
+                                <label for="dia" class="form-label">
                                     <i class="fas fa-calendar-day"></i> Selecciona el día *
                                 </label>
                                 <select 
-                                    id="fecha" 
-                                    name="fecha" 
+                                    id="dia" 
+                                    name="dia" 
                                     class="form-control" 
                                     required 
                                     aria-required="true">
                                     <option value="">-- Elige un día --</option>
-                                    <option value="2025-11-27">27 de Noviembre, 2025</option>
-                                    <option value="2025-11-28">28 de Noviembre, 2025</option>
-                                    <option value="2025-11-29">29 de Noviembre, 2025</option>
+                                    <option value="27">27 de Noviembre, 2025</option>
+                                    <option value="28">28 de Noviembre, 2025</option>
+                                    <option value="29">29 de Noviembre, 2025</option>
                                 </select>
                                 <div class="invalid-feedback">Debes seleccionar un día.</div>
                             </div>
 
                             <div class="col-custom col-custom-half">
-                                <label for="hora" class="form-label">
-                                    <i class="fas fa-clock"></i> Selecciona la hora y el evento * 
+                                <label for="eleccion" class="form-label">
+                                    <i class="fas fa-clock"></i> Selecciona la hora y el evento *
                                 </label>
                                 <select 
-                                    id="hora" 
-                                    name="hora" 
+                                    id="eleccion" 
+                                    name="eleccion" 
                                     class="form-control" 
                                     required 
                                     aria-required="true">
                                     <option value="">-- Elige hora y  evento --</option>
-                                    <option value="10:00">10:00 - Sesión Mañana - Automatiza tu trabajo empresarial con Robocorp, Claude, OpenAI, Copilot y Github</option>
-                                    <option value="12:00">12:00 - Sesión Mediodia - Analiza tu rendimiento con Excel, chatgpt, y muchas otras herramientas disponibles de forma freemium</option>
-                                    <option value="16:00">16:00 - Sesión Tarde - Del B2B tradicional al digital: introducción a la digitalización empresarial y su impacto en el mercado </option>
-                                    <option value="18:00">18:00 - Sesión Tarde - IA generativa para 3D y 2D en Creación de Assets para videojuegos basado en unity</option>
-                                    <option value="20:00">20:00 - Sesión Noche - Colaboración Mou5Labs x CUPRA</option>
+                                    <option value="10:00-Automatiza">10:00 - Sesión Mañana - Automatiza tu trabajo empresarial con Robocorp, Claude, OpenAI, Copilot y Github</option>
+                                    <option value="12:00-Analiza">12:00 - Sesión Mediodia - Analiza tu rendimiento con Excel, chatgpt, y muchas otras herramientas disponibles de forma freemium</option>
+                                    <option value="16:00-B2B">16:00 - Sesión Tarde - Del B2B tradicional al digital: introducción a la digitalización empresarial y su impacto en el mercado </option>
+                                    <option value="18:00-IaGenerativa">18:00 - Sesión Tarde - IA generativa para 3D y 2D en Creación de Assets para videojuegos basado en unity</option>
+                                    <option value="20:00-Colaboracion">20:00 - Sesión Noche - Colaboración Mou5Labs x CUPRA</option>
                                 </select>
                                 <div class="invalid-feedback">Debes seleccionar una hora.</div>
                             </div>
