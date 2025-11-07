@@ -26,7 +26,7 @@ public class JavaJDBC {
 
             System.out.println();
 
-            // 5. PERSONAS INSCRITAS POR EVENTO (elección)
+            // 4. PERSONAS INSCRITAS POR EVENTO (elección)
             System.out.println("Inscritos por evento:");
             System.out.println("------------------------------------");
             ResultSet porEvento = statement.executeQuery(
@@ -38,7 +38,7 @@ public class JavaJDBC {
 
             System.out.println();
 
-            // 6. LISTADO DE PERSONAS CON SU EVENTO
+            // 5. LISTADO DE PERSONAS CON SU EVENTO
             System.out.println("Listado de personas inscritas:");
             System.out.println("====================================");
             ResultSet listado = statement.executeQuery(
@@ -50,7 +50,7 @@ public class JavaJDBC {
                         + listado.getString("eleccion") + " (" + listado.getString("dia") + ")");
             }
 
-            // 7. Cerrar conexión
+            // 6. Cerrar conexión
             connection.close();
 
         } catch (Exception e) {
